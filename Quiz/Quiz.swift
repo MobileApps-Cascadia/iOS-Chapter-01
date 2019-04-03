@@ -24,6 +24,8 @@ private let answers: [String] = [
         return questions.count
     }
     
+    
+    
     func question( number num:Int ) -> String {
         return questions[num]
     }

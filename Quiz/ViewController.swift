@@ -23,24 +23,26 @@ class ViewController: UIViewController {
         super.init(coder: decoder)
     }
     //TODO : Modify the functions below to use the quiz objects properties and methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = questions[currentQuestionIndex]
+        questionLabel.text = quiz.question(number: currentQuestionIndex)
     }
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
         currentQuestionIndex += 1
-        if currentQuestionIndex == questions.count {
+        if currentQuestionIndex == quiz.count {
             currentQuestionIndex = 0
         }
         
-        let question: String = questions[currentQuestionIndex]
+        let question: String =
+           quiz.question(number: currentQuestionIndex)
         questionLabel.text = question
         answerLabel.text = "???"
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
-        let answer: String = answers[currentQuestionIndex]
+        let answer: String = quiz.answer(number: currentQuestionIndex)
         answerLabel.text = answer
     }
 
