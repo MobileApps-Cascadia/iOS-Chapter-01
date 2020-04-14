@@ -8,13 +8,13 @@
 
 class Quiz{
  
-private let questions: [String] = [
+let questions: [String] = [
     "From what is cognac made?",
     "What is 7+7?",
     "What is the capital of Vermont?"
 ]
     
-private let answers: [String] = [
+let answers: [String] = [
     "Grapes",
     "14",
     "Montpelier"
