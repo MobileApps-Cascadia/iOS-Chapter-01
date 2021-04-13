@@ -45,3 +45,4 @@ class ViewController: UIViewController {
 
 }
 
+//debuged and working normal
