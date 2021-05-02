@@ -9,16 +9,16 @@ class ViewController: UIViewController {
     @IBOutlet var answerLabel: UILabel!
     
     var currentQuestionIndex: Int = 0
+    
     let quiz:Quiz = Quiz() //This creates a Quiz object model to provide the quiz data, questions and answers
     
-    // ViewController uses model
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = quiz.question(number: currentQuestionIndex)
     }
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
-        currentQuestionIndex += 1 % quiz.count
+        currentQuestionIndex = (currentQuestionIndex + 1) % quiz.count
         let question: String = quiz.question(number: currentQuestionIndex)
         questionLabel.text = question
         answerLabel.text = "???"
