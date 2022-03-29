@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickBtn(_ sender: UIButton) {
         newLabel.text = "hello"
-        }
+    }
         
         
     @IBAction func showNextQuestion(_ sender: UIButton) {
